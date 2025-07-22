@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { CallToAction } from "@/components/call-to-action"
+import { Footer } from "@/components/footer"
 import Image from "next/image"
 
 export default function VisionPage() {
@@ -93,6 +94,7 @@ export default function VisionPage() {
       </section>
 
       <CallToAction />
+      <Footer />
     </main>
   )
 }

@@ -22,18 +22,13 @@ const theWayTiers = [
         included: true,
       },
       {
-        name: "Basic Scripture Insights",
-        description: "Essential biblical guidance and context",
-        included: true,
-      },
-      {
-        name: "Community Access",
-        description: "Join discussions with fellow believers",
-        included: true,
-      },
-      {
-        name: "Advanced AI Features",
+        name: "Premium AI Features",
         description: "Full WayFinder AI capabilities",
+        included: false,
+      },
+      {
+        name: "Advanced Features",
+        description: "Complete resource library and tools",
         included: false,
       },
     ],
@@ -45,19 +40,14 @@ const theWayTiers = [
       monthly: 19.99,
       yearly: 191.9, // 20% discount
     },
-    description: "Unlock the full power of WayFinder AI for deeper spiritual growth",
+    description: "Unlock premium WayFinder AI for deeper spiritual growth",
     highlight: true,
     badge: "Most Popular",
     icon: <Sparkles className="w-8 h-8 text-slate-700" />,
     features: [
       {
-        name: "Unlimited WayFinder AI",
-        description: "Full access to our Christ-centered AI assistant",
-        included: true,
-      },
-      {
-        name: "Advanced AI Model Access",
-        description: "Including upcoming enhanced capabilities",
+        name: "Premium WayFinder AI",
+        description: "Full access to our advanced Christ-centered AI assistant",
         included: true,
       },
       {
@@ -84,33 +74,28 @@ const theWayTiers = [
       monthly: 49.99,
       yearly: 479.9,
     },
-    description: "Advanced features for spiritual leaders and those called to greater impact",
+    description: "Unlimited access and advanced features for spiritual leaders",
     icon: <Crown className="w-8 h-8 text-slate-600" />,
     comingSoon: true,
     features: [
+      {
+        name: "Unlimited WayFinder AI",
+        description: "No limits on AI conversations and guidance",
+        included: true,
+      },
       {
         name: "Everything in Disciple",
         description: "All features from the Disciple plan",
         included: true,
       },
       {
-        name: "Leadership Tools",
-        description: "Resources for discipling and leading others",
+        name: "Advanced Feature #1",
+        description: "To be announced - exciting new capability",
         included: true,
       },
       {
-        name: "Advanced Analytics",
-        description: "Insights into your spiritual growth journey",
-        included: true,
-      },
-      {
-        name: "Priority Support",
-        description: "Direct access to our team for guidance",
-        included: true,
-      },
-      {
-        name: "Custom Integrations",
-        description: "Connect with your favorite spiritual tools",
+        name: "Advanced Feature #2",
+        description: "To be announced - powerful new tool",
         included: true,
       },
     ],

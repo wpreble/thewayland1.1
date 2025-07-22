@@ -52,8 +52,6 @@ export function HeroSection() {
             <Link href="/vision">Explore The Vision</Link>
           </Button>
         </div>
-
-        <div className="text-sm text-slate-500 font-light">Join thousands discovering the original Way of Christ</div>
       </div>
     </section>
   )

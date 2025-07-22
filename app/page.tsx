@@ -5,6 +5,7 @@ import { JourneySection } from "@/components/journey-section"
 import { TheWayPricing } from "@/components/the-way-pricing"
 import { CallToAction } from "@/components/call-to-action"
 import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <JourneySection />
       <TheWayPricing />
       <CallToAction />
+      <Footer />
     </main>
   )
 }

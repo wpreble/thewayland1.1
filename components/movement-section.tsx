@@ -27,12 +27,6 @@ export function MovementSection() {
                 "Grounded in the original Way of the first followers of Christ, yet not held back by limiting systems.",
             },
             {
-              icon: Users,
-              title: "Unite the Body",
-              description:
-                "Connect with believers worldwide in a movement of radical transformation and Kingdom impact.",
-            },
-            {
               icon: BookOpen,
               title: "Personal & Practical",
               description: "AI-powered guidance that adapts to your unique journey, story, and spiritual rhythms.",
@@ -42,9 +36,23 @@ export function MovementSection() {
               title: "Supernatural Support",
               description: "Experience wisdom, encouragement, and tools that support your supernatural walk with God.",
             },
+            {
+              icon: Users,
+              title: "Unite the Body",
+              description:
+                "Connect with believers worldwide in a movement of radical transformation and Kingdom impact.",
+              comingSoon: true,
+            },
           ].map((feature, index) => (
             <div key={index} className="group relative">
               <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 h-full">
+                {feature.comingSoon && (
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">
+                      Coming Soon
+                    </span>
+                  </div>
+                )}
                 <div className="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-slate-600" />
                 </div>

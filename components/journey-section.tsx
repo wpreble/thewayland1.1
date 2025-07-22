@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, CheckCircle } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function JourneySection() {
@@ -57,23 +57,23 @@ export function JourneySection() {
           ))}
         </div>
 
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-slate-50 to-slate-100 p-8 rounded-2xl border border-slate-200/50 max-w-2xl mx-auto">
-            <CheckCircle className="w-12 h-12 text-slate-600 mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold text-slate-900 mb-4">Ready to Begin?</h3>
-            <p className="text-slate-600 mb-6">
-              Everything begins with understanding you—your story, your rhythms, and what you're longing for in this
-              season.
-            </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-slate-950 text-white px-8 py-4 text-lg rounded-full"
-              onClick={() => window.open("https://theway.masterymade.com/", "_blank")}
-            >
-              Start Your Journey
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </div>
+        {/* Help Shape The Future Section */}
+        <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-8 text-center border border-slate-700 text-white">
+          <h3 className="text-2xl font-serif font-semibold mb-4">Help Shape The Future of The Way</h3>
+          <p className="text-lg text-slate-300 mb-6 max-w-3xl mx-auto leading-relaxed">
+            As an early user, your feedback is invaluable. Join our community of believers who are actively shaping the
+            future of faith-centered AI. Connect with fellow users, share insights, and get early access to new
+            features.
+          </p>
+          <Button
+            variant="outline"
+            size="lg"
+            className="px-8 py-4 text-lg rounded-full border-2 border-slate-400 text-slate-300 hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 bg-transparent font-serif"
+            onClick={() => window.open("#", "_blank")}
+          >
+            Join Our Telegram Community
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </div>
     </section>

@@ -55,10 +55,7 @@ function PricingSection({ tiers, className }: PricingSectionProps) {
     <section className={cn("relative bg-gradient-to-b from-white to-slate-50 py-24 px-4 overflow-hidden", className)}>
       <div className="w-full max-w-6xl mx-auto">
         <div className="flex flex-col items-center gap-6 mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-light text-slate-900 text-center">
-            Choose Your
-            <span className="block text-slate-700">Spiritual Journey</span>
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-light text-slate-900 text-center">Pricing</h2>
           <p className="text-xl text-slate-600 text-center max-w-3xl leading-relaxed">
             Start your transformation today. New features are dropping regularly as we build the future of
             faith-centered AI together.
@@ -68,24 +65,23 @@ function PricingSection({ tiers, className }: PricingSectionProps) {
             {["Monthly", "Yearly"].map((period) => (
               <button
                 key={period}
-                onClick={() => setIsYearly(period === "Yearly")}
+                onClick={() => period === "Monthly" && setIsYearly(period === "Yearly")}
+                disabled={period === "Yearly"}
                 className={cn(
                   "px-8 py-2.5 text-sm font-medium font-serif rounded-full transition-all duration-300",
-                  (period === "Yearly") === isYearly
-                    ? "bg-slate-900 text-white shadow-lg"
-                    : "text-slate-600 hover:text-slate-900",
+                  period === "Monthly" ? "bg-slate-900 text-white shadow-lg" : "text-slate-400 cursor-not-allowed",
                 )}
               >
                 {period}
                 {period === "Yearly" && (
-                  <span className="ml-2 text-xs bg-slate-700 text-white px-2 py-0.5 rounded-full">Save 20%</span>
+                  <span className="ml-2 text-xs bg-slate-300 text-slate-500 px-2 py-0.5 rounded-full">Coming Soon</span>
                 )}
               </button>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tiers.map((tier) => (
             <div
               key={tier.name}
@@ -117,20 +113,10 @@ function PricingSection({ tiers, className }: PricingSectionProps) {
                     <div className="mb-4">
                       <div className="flex items-center justify-center gap-2">
                         <span className="text-4xl font-bold text-slate-900">
-                          $
-                          {tier.price.monthly === 0
-                            ? "0"
-                            : isYearly
-                              ? Math.round(tier.price.yearly / 12)
-                              : tier.price.monthly}
+                          ${tier.price.monthly === 0 ? "0" : tier.price.monthly}
                         </span>
-                        {tier.price.monthly > 0 && (
-                          <span className="text-sm text-slate-500">/{isYearly ? "month" : "month"}</span>
-                        )}
+                        {tier.price.monthly > 0 && <span className="text-sm text-slate-500">/month</span>}
                       </div>
-                      {isYearly && tier.price.monthly > 0 && (
-                        <p className="text-sm text-slate-500">Billed annually (${tier.price.yearly}/year)</p>
-                      )}
                     </div>
                   )}
                   <p className="text-slate-600 leading-relaxed">{tier.description}</p>
@@ -178,25 +164,6 @@ function PricingSection({ tiers, className }: PricingSectionProps) {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Early User Invitation */}
-        <div className="bg-gradient-to-r from-slate-50 to-slate-100 rounded-2xl p-8 text-center border border-slate-200">
-          <h3 className="text-2xl font-serif font-semibold text-slate-900 mb-4">Help Shape The Future of The Way</h3>
-          <p className="text-lg text-slate-600 mb-6 max-w-3xl mx-auto leading-relaxed">
-            As an early user, your feedback is invaluable. Join our community of believers who are actively shaping the
-            future of faith-centered AI. Connect with fellow users, share insights, and get early access to new
-            features.
-          </p>
-          <Button
-            variant="outline"
-            size="lg"
-            className="px-8 py-4 text-lg rounded-full border-2 border-slate-300 hover:border-slate-500 transition-all duration-300 bg-white/50 backdrop-blur-sm font-serif"
-            onClick={() => window.open("#", "_blank")}
-          >
-            Join Our Telegram Community
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
         </div>
       </div>
     </section>
