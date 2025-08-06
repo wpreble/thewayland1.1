@@ -27,6 +27,12 @@ export function Navigation() {
             >
               Vision
             </Link>
+            <Link
+              href="/early-access"
+              className="text-xl font-serif font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              Early Access
+            </Link>
             <Button
               size="lg"
               className="bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-slate-950 text-lg font-serif font-semibold text-white px-8 py-3"
