@@ -1,4 +1,4 @@
-import { Users, Shield, CreditCard, Crown } from "lucide-react"
+import { Users, Shield, Crown } from 'lucide-react'
 
 export function HowItWorks() {
   const steps = [
@@ -10,8 +10,9 @@ export function HowItWorks() {
     },
     {
       icon: Users,
-      title: "Weekly Invitations",
-      description: "New members are invited from the waitlist in small groups each week.",
+      title: "Early Access", // Changed title
+      description:
+        "New members are invited from the waitlist in small groups each week. Your deposit immediately covers your subscription beginning upon access.", // Updated description
     },
     {
       icon: Shield,
@@ -19,11 +20,7 @@ export function HowItWorks() {
       description:
         "Deposits guarantee you're first in line and are 100% refundable before you activate your membership.",
     },
-    {
-      icon: CreditCard,
-      title: "Covers First Month",
-      description: "If you stay, your deposit covers your first month.",
-    },
+    // Removed the "Covers First Month" step
   ]
 
   return (
@@ -33,7 +30,7 @@ export function HowItWorks() {
           <h2 className="text-3xl md:text-4xl font-serif font-light text-slate-900 mb-6">How Early Access Works:</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Adjusted grid columns */}
           {steps.map((step, index) => (
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
